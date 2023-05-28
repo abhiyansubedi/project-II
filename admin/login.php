@@ -2,7 +2,7 @@
 session_start();
 include 'header.php';
 include 'ft.php';
-include 'db.php';
+include_once 'db.php';
 ?>
 <div class="container">
     <div class="head" style="text-align: center;">
@@ -35,9 +35,9 @@ if (isset($_POST['submit'])) {
     $row = mysqli_num_rows($run);
     if ($row == 1) {
         $_SESSION['loginsuccessful'] = 1;
-        echo "<script>alert('Logged in Successfully');</script>";
+        header("Location: index.php");        
     } else {
-        echo "<script>alert('Wrong id passoword');</script>";
+        echo "<script>alert('Wrong id password');</script>";
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['loginsuccessful'])) {
+if ($_SESSION['loginsuccessful']) {
 } else {
     header('location:login.php');
 }

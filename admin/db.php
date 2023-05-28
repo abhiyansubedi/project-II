@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect('localhost', 'root', '', 'project-ii');
+$con = mysqli_connect('localhost', 'root', 'mniadia20yo', 'project-ii');
 
 
 ?>
