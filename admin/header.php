@@ -1,3 +1,11 @@
+<?php
+session_start();
+if ($_SESSION['loginsuccessful']) {
+} else {
+    header('location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,20 +26,34 @@
     <!-- A grey horizontal navbar that becomes vertical on small screens -->
     <nav class="navbar navbar-expand-sm bg-light">
 
+        <a class="navbar-brand" href="index.php">MovieFlix</a>
+
+
+
         <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item ">
                 <a class="nav-link" href="#">Movies</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Genre</a>
+                <a class="nav-link" href="genre.php">Genre</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Watchlist</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="adminlist.php">Admin list</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="registeradmin.php">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-danger" href="logout.php">Log out</a>
+            </li>
+
+
 
         </ul>
 
